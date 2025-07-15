@@ -1,0 +1,11 @@
+[Unit]
+Description=DomuPi Wi-Fi AutoConnect
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /home/pi/domuPi/scripts/wifi_connect.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
